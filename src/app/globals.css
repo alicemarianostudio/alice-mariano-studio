@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Brown Sugar';
+  src: url('../assets/fonts/Brown-Sugar.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Times New Roman Regular';
+  src: url('../assets/fonts/Times-Roman-01.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Times New Roman Bold';
+  src: url('../assets/fonts/Times-Bold-02.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Times New Roman Italic';
+  src: url('../assets/fonts/Times-Italic-03.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Times New Roman Bold Italic';
+  src: url('../assets/fonts/Times-BoldItalic-04.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Times New Roman TTC';
+  src: url('../assets/fonts/Times.ttc') format('truetype');
+}
+
+:root {
+  --background: rgba(255, 255, 255, 1);
+  --text-color: rgba(0, 0, 0, 1);
+  --primary-pink: rgba(226, 184, 193, 1);
+  --secondary-pink: rgba(241, 219, 224, 1);
+  --tertiary-pink: rgba(248, 237, 239, 1);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .accent-font {
+    font-family: 'Brown Sugar' !important;
+    font-weight: 400;
+  }
+
+  .primary-font {
+    font-family: 'Times New Roman Regular' !important;
+  }
+
+  a, p, input, ul, li {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .primary-pink {
+    color: var(--primary-pink);
+  }
+
+  .secondary-pink-bg {
+    background: var(--secondary-pink);
+  }
+
+  .tertiary-pink-bg {
+    background: var(--tertiary-pink);
+  }
+
+  .white-bg {
+    background-color: --var(--background);
+  }
+}
+
+body {
+  color: var(--text-color);
+  background: --var(--background);
+  font-family: 'Times New Roman';
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Helvetica Neue';
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+a,
+p,
+input {
+  font-family: 'Times New Roman Regular';
+  letter-spacing: 0.3px;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button {
+  font-family: 'Times New Roman Bold';
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 0.5rem 0;
+  background: transparent;
+}
+
+input::placeholder {
+  font-family: 'Times New Roman Regular';
+  color: var(--text-color);
+}
+
+img {
+  object-fit: cover;
+}
+
+
+.logo-alone {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.home-card {
+  position: relative;
+}
+
+.home-card:nth-child(5) article {
+  position: relative;
+}
+
+.home-card:nth-child(5) article h1 {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  text-align: right;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 2rem;
+}
+
+.portable-text p {
+  margin-bottom: 1rem;
+  letter-spacing: -.1px;
+}
+
+.portable-text a {
+  text-decoration: underline;
+}
+
+.omnisend button {
+  background: transparent!important;
+}
+
+.omnisend div {
+  width: 100vw;
+  max-width: none!important;
+  margin: 0!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+
+.omnisend input {
+  width: 100%;
+  border-bottom: 1px solid #000!important;
+  text-align: center;
+  font-size: 14px!important;
+  white-space: wrap;
+}
+
+.stepper {
+  position: relative;
+}
+
+.stepper:after {
+  width: 100%;
+  height: 1px;
+  content: ' ';
+  background: #ccc;
+  position: absolute;
+}
+
+.stepper-dot {
+  z-index: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+select {
+  border: 0!important;
+  border-bottom: 1px solid #000!important;
+  border-radius: 0!important;
+  background: none;
+  padding: 1rem!important;
+  width: 100%;
+}
+
+.bg-gray-600 {
+  background: #666!important;
+}
+
+.services button {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#omnisend-forms-container h3 {
+  text-transform: none!important;
+}
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.newsletter-text {
+  font-size: 17.5px;
+  letter-spacing: 0.4px;
+  line-height: 32px;
+}
+
+.portable-small {
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  line-height: 1.5;
+}
+
+.home-card:nth-child(odd) article {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.object-cover {
+  max-height: 200px;
+  width: auto;
+}
+
+
+@media (min-width: 1025px) {
+  .logo {
+    position: absolute;
+  }
+
+  .home-text {
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    right: 0px;
+  }
+
+  .project-image img {
+    height: 420px!important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .object-cover {
+    max-height: 150px;
+    width: auto;
+  }
+
+
+  .portable-text p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .omnisend input {
+    font-size: 12px!important;
+  }
+
+  .project-image img {
+    height: 250px!important;
+  }
+}
